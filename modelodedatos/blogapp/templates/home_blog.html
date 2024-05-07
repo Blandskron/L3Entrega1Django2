@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<body>
+    <h1>Bienvenidos a mi Blog</h1>
+    <ul>
+        {% for post in posts %}
+            <li>{{ post.titulo }} - {{ post.contenido }} - {{ post.fecha }}
+                [<a href="#">Actualizar</a>] 
+                [<a href="#">Eliminar</a>]
+            </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="#">Crear Post</a>
+</body>
+</html>
